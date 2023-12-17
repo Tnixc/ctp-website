@@ -59,13 +59,13 @@ export default {
                 <span class="font-semibold text-sm ">{{ colorKey[0].toUpperCase() + colorKey.slice(1) }}</span>
               </td>
               <td class="p-2">
-                <CopyButton :text=" variants[flavor][colorKey].hex " />
+                <PaletteCopyButton :text=" variants[flavor][colorKey].hex " />
               </td>
               <td class="p-2 col-span-2">
-                <CopyButton :text=" variants[flavor][colorKey].rgb " />
+                <PaletteCopyButton :text=" variants[flavor][colorKey].rgb " />
               </td>
               <td class="p-2">
-                <CopyButton :text=" variants[flavor][colorKey].hsl " />
+                <PaletteCopyButton :text=" variants[flavor][colorKey].hsl " />
               </td>
             </tr>
           </table>
