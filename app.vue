@@ -7,7 +7,7 @@ useHead({
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Manrope&display=swap',
+      href: 'https://fonts.googleapis.com/css2?family=Flow+Rounded&family=Manrope:wght@400;700&display=swap',
       crossorigin: '',
     },
   ],

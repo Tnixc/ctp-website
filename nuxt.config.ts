@@ -43,6 +43,7 @@ export default defineNuxtConfig({
         extend: {
           fontFamily: {
             sans: ['Manrope', 'sans-serif', 'ui-sans-serif', 'system-ui'],
+            flow: ['Flow Rounded'],
           },
         },
       },
