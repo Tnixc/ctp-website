@@ -45,7 +45,7 @@ export default {
       >
         <summary class="text-2xl font-bold cursor-default flex items-center justify-around gap-2">
           <h2 class="flex-grow">
-            {{ flavorDisplayName[flavor] }}
+            ↓ {{ flavorDisplayName[flavor] }}
           </h2>
           <div v-for=" colorKey in colors " :key=" colorKey " class="md:block hidden">
             <span class="block w-4 h-4 rounded-md" :style=" { backgroundColor: variants[flavor][colorKey].hex } " />
