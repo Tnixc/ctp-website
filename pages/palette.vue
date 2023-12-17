@@ -1,20 +1,6 @@
 <script lang="ts">
 import { variants } from '@catppuccin/palette'
 
-// export default {
-//   data() {
-//     return {
-//       flavors: ['latte', 'frappe', 'macchiato', 'mocha'],
-//       flavorDisplayName: {
-//         latte: 'Latte',
-//         frappe: 'Frappé',
-//         macchiato: 'Macchiato',
-//         mocha: 'Mocha',
-//       },
-//       colors: ['primary', 'secondary', 'accent'], // adjust as needed
-//     }
-//   },
-// }
 const flavors = Object.keys(variants) as (keyof typeof variants)[]
 const flavorDisplayName = {
   latte: 'Latte',
