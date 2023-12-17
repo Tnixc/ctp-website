@@ -1,6 +1,6 @@
 <template>
-  <NuxtLink to="/" class="bg-red">
-    Home page
+  <NuxtLink to="/" class="bg-rosewater">
+    Home page1
   </NuxtLink>
   <NuxtLink to="/ports">
     Ports page
