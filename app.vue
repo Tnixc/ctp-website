@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useHead({
   link: [
     {
@@ -15,7 +15,7 @@ useHead({
 </script>
 
 <template>
-  <div class="latte">
+  <div>
     <Navigation />
     <NuxtPage />
   </div>

@@ -1,3 +1,5 @@
 <template>
-  <h1>helo</h1>
+  <h1 class="text-5xl">
+    helo
+  </h1>
 </template>

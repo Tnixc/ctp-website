@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import catppuccinTailwindcss from '@catppuccin/tailwindcss'
+import tailwindcssThemer from 'tailwindcss-themer'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -10,7 +10,25 @@ export default defineNuxtConfig({
   tailwindcss: {
     config: {
       plugins: [
-        catppuccinTailwindcss,
+        tailwindcssThemer({
+          defaultTheme: {
+            extend: {
+              colors: {
+                primary: 'red'
+              }
+            }
+          },
+          themes: [
+            {
+              name: 'my-theme',
+              extend: {
+                colors: {
+                  primary: 'blue',
+                },
+              },
+            },
+          ],
+        }),
       ],
       theme: {
         extend: {
