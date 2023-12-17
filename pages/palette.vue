@@ -41,7 +41,7 @@ export default {
     <div class="flex flex-col gap-y-6 items-center w-full">
       <details
         v-for=" flavor in flavors " :key=" flavor "
-        class="p-8 flex flex-col gap-y-3 rounded-lg w-full max-w-4xl bg-crust"
+        class="p-8 flex flex-col gap-y-3 rounded-lg w-full max-w-4xl bg-mantle"
       >
         <summary class="text-2xl font-bold cursor-default flex items-center justify-around gap-2">
           <h2 class="flex-grow">

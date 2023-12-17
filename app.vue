@@ -7,7 +7,7 @@ useHead({
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Flow+Rounded&family=Manrope:wght@500;700&display=swap',
+      href: 'https://fonts.googleapis.com/css2?family=Flow+Circular&family=Manrope:wght@500;700&display=swap',
       crossorigin: '',
     },
   ],
@@ -16,6 +16,8 @@ useHead({
 
 <template>
   <Navigation />
-  <NuxtPage />
-  <Footer />
+  <div class="bg-base text-text overflow-y-scroll">
+    <NuxtPage />
+    <Footer />
+  </div>
 </template>
