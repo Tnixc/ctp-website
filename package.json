@@ -12,10 +12,12 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@vueuse/motion": "^2.0.0"
+    "@vueuse/motion": "^2.0.0",
+    "tailwindcss": "^3.3.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.4.6",
+    "@catppuccin/tailwindcss": "^0.1.6",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "eslint": "^8.56.0",

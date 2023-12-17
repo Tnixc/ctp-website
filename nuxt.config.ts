@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import catppuccinTailwindcss from '@catppuccin/tailwindcss'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -7,6 +9,9 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     config: {
+      plugins: [
+        catppuccinTailwindcss,
+      ],
       theme: {
         extend: {
           fontFamily: {
