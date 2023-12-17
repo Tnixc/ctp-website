@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
+    '@nuxt/image',
   ],
   tailwindcss: {
     config: {
@@ -41,7 +42,7 @@ export default defineNuxtConfig({
         },
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif', 'ui-sans-serif', 'system-ui'],
+            sans: ['Manrope', 'sans-serif', 'ui-sans-serif', 'system-ui'],
           },
         },
       },

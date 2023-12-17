@@ -7,7 +7,7 @@ useHead({
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Inter&display=swap',
+      href: 'https://fonts.googleapis.com/css2?family=Manrope&display=swap',
       crossorigin: '',
     },
   ],
@@ -15,6 +15,7 @@ useHead({
 </script>
 
 <template>
+  <h1>1234567890 Quartz of the black sphinx Ill</h1>
   <Navigation />
   <NuxtPage />
 </template>

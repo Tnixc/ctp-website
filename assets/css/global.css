@@ -110,3 +110,6 @@
   --mantle:rgb(24, 24, 37);
   --crust:rgb(17, 17, 27);
 }
+*{
+  transition: background-color 0.5s ease-in-out;
+}
