@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@vueuse/nuxt": "^10.7.0"
+    "@vueuse/motion": "^2.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.4.6",

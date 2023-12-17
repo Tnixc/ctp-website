@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
   ],
   tailwindcss: {
