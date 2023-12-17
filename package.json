@@ -1,17 +1,22 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@vueuse/nuxt": "^10.7.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.4.6",
     "@nuxt/devtools": "latest",
-    "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "eslint": "^8.56.0",
     "nuxt": "^3.8.2",
