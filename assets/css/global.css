@@ -82,7 +82,7 @@
   --mantle:rgb(30, 32, 48);
   --crust:rgb(24, 25, 38);
 }
-.mocha {
+.mocha,:root {
   --rosewater:rgb(245, 224, 220);
   --flamingo:rgb(242, 205, 205);
   --pink:rgb(245, 194, 231);
