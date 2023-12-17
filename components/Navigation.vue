@@ -1,58 +1,131 @@
-<script setup>
-function setTheme(theme) {
-  document.body.classList.remove('latte', 'frappe', 'macchiato', 'mocha')
-  localStorage.setItem('theme', theme)
-  document.body.classList.add(theme)
-}
-onMounted(() => {
-  const theme = localStorage.getItem('theme')
-  if (theme !== 'latte' && theme !== 'frappe' && theme !== 'macchiato' && theme !== 'mocha') {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      setTheme('mocha')
+<script>
+export default {
+  data() {
+    return {
+      isOpen: false,
+    }
+  },
+  mounted() {
+    const theme = localStorage.getItem('theme')
+    if (theme !== 'latte' && theme !== 'frappe' && theme !== 'macchiato' && theme !== 'mocha') {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        this.setTheme('mocha')
+      else
+        this.setTheme('latte')
+    }
+    else {
+      this.setTheme(theme)
+    }
+    if (window.innerWidth >= 768)
+      this.isOpen = true
     else
-      setTheme('latte')
-  }
-  else {
-    setTheme(theme)
-  }
-})
+      this.isOpen = false
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768)
+        this.isOpen = true
+      else
+        this.isOpen = false
+    })
+  },
+  methods: {
+    toggleVisibility() {
+      this.isOpen = !this.isOpen
+    },
+    setTheme(theme) {
+      document.body.classList.remove('latte', 'frappe', 'macchiato', 'mocha')
+      localStorage.setItem('theme', theme)
+      document.body.classList.add(theme)
+    },
+  },
+}
 </script>
 
 <template>
-  <div class="flex p-5 bg-base justify-center text-text">
-    <div class="w-full max-w-5xl flex justify-between items-center ">
-      <div class="flex justify-around items-center gap-4">
-        <div class="flex items-center gap-3">
+  <div class="flex p-3 bg-base justify-center text-text flex-col md:flex-row text-xl md:text-base">
+    <div class="w-full max-w-5xl flex justify-between items-center flex-col md:flex-row">
+      <div class="flex justify-around items-center gap-4 md:w-fit w-full flex-wrap md:flex-nowrap ">
+        <div class="flex items-center gap-3 w-full">
           <NuxtImg src="/Catppuccin.png" alt="ctp logo" class="w-12 h-12" />
-          <h1 class="text-2xl font-bold">
+          <h1 class="text-2xl font-bold select-none flex-grow text-text">
             Catppuccin
           </h1>
-        </div>
-        <div class="flex gap-2 text-subtext1">
-          <button class="p-1 relative theme" @click="setTheme('latte')">
-            Latte
-          </button>
-          <button class="p-1 relative theme" @click="setTheme('frappe')">
-            Frappe
-          </button>
-          <button class="p-1 relative theme" @click="setTheme('macchiato')">
-            Macchiato
-          </button>
-          <button class="p-1 relative theme" @click="setTheme('mocha')">
-            Mocha
+          <button class="md:hidden block" @click="toggleVisibility">
+            <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z" /></svg>
+            <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z" /></svg>
           </button>
         </div>
+        <Transition>
+          <div v-show="isOpen" class="flex gap-4 md:gap-2 text-subtext1 flex-col md:flex-row items-end w-full md:w-fit">
+            <button class="p-1 relative theme" @click="setTheme('latte')">
+              Latte
+            </button>
+            <button class="p-1 relative theme" @click="setTheme('frappe')">
+              Frappe
+            </button>
+            <button class="p-1 relative theme" @click="setTheme('macchiato')">
+              Macchiato
+            </button>
+            <button class="p-1 relative theme" @click="setTheme('mocha')">
+              Mocha
+            </button>
+          </div>
+        </Transition>
       </div>
-      <nav>
-        <NuxtLink to="/" class="bg-rosewater">
-          Home page1
-        </NuxtLink>
-        <NuxtLink to="/ports">
-          Ports page
-        </NuxtLink>
-        <a href="">Github</a>
-        <a href="">Donate</a>
-      </nav>
+      <div v-show="isOpen" class="w-full my-7 md:hidden block h-0.5 bg-surface0 " />
+      <Transition>
+        <nav v-show="isOpen" class="flex gap-4 flex-col md:flex-row items-end w-full md:w-fit">
+          <NuxtLink class="text-subtext0 hover:text-text" to="/">
+            Home
+          </NuxtLink>
+          <NuxtLink class="text-subtext0 hover:text-text" to="/palette">
+            Palette
+          </NuxtLink>
+          <NuxtLink class="text-subtext0 hover:text-text" to="/ports">
+            Ports
+          </NuxtLink>
+          <a class="text-subtext0 hover:text-text" href="">Github</a>
+          <a class="text-subtext0 hover:text-text" href="">Donate</a>
+        </nav>
+      </Transition>
     </div>
   </div>
 </template>
+
+<style>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+*{
+  transition: background-color 0.5s ease;
+}
+.theme::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  border-radius: 99px;
+  background: var(--lavender);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.theme:hover::after{
+  background: var(--rosewater);
+  opacity: 1;
+}
+.latte .theme:nth-child(1)::after,.frappe .theme:nth-child(2)::after,.macchiato .theme:nth-child(3)::after,.mocha .theme:nth-child(4)::after{
+  opacity: 1;
+}
+.router-link-active {
+  color: var(--text);
+}
+</style>
