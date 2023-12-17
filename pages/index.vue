@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:p-40 p-10 h-screen flex">
+  <div class="lg:p-40 p-10 h-screen flex flex-wrap lg:flex-nowrap">
     <div class="flex-col gap-6 flex ">
       <h1
         v-motion class="text-5xl font-bold" :initial=" {
@@ -62,21 +62,21 @@
           type: 'keyframes',
           ease: 'easeOut',
         },
-      } " class="text-2xl font-flow flex flex-col max-w-2xl p-5 bg-mantle h-fit rounded-lg select-none"
+      } " class="text-2xl font-flow flex flex-col max-w-2xl p-5 bg-mantle h-fit rounded-lg select-none overflow-hidden"
     >
-<div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) {</div>
-<div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Count:"</span>, i);</div>
-<div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden">}</div>
+      <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) {</div>
+      <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Count:"</span>, i);</div>
+      <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden">}</div>
 
-<div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-overlay0">// Array iteration</span></div>
-<div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span> colors = [<span class="mx-4 text-green">"Red"</span>, <span class="mx-4 text-green">"Green"</span>, <span class="mx-4 text-green">"Blue"</span>];</div>
-<div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> index <span class="mx-4 text-mauve">in</span> colors) {</div>
-<div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Color:"</span>, colors[index]);</div>
-<div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden">}</div>
+      <div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-overlay0">// Array iteration</span></div>
+      <div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span> colors = [<span class="mx-4 text-green">"Red"</span>, <span class="mx-4 text-green">"Green"</span>, <span class="mx-4 text-green">"Blue"</span>];</div>
+      <div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> index <span class="mx-4 text-mauve">in</span> colors) {</div>
+      <div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Color:"</span>, colors[index]);</div>
+      <div v-motion-slide-visible-left :delay="1000" class="line overflow-hidden">}</div>
 
-<div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-overlay0">// Assuming there is an HTML element with the id "myParagraph"</span></div>
-<div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span> paragraph = <span class="mx-4 text-peach">document</span>.<span class="mx-4 text-blue">getElementById</span>(<span class="mx-4 text-green">"myParagraph"</span>);</div>
-<div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden">paragraph.<span class="hljs-property">innerHTML</span> = <span class="mx-4 text-green">"New content for the paragraph!"</span>;</div>
-<div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden" /></pre>
+      <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-overlay0">// Assuming there is an HTML element with the id "myParagraph"</span></div>
+      <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span> paragraph = <span class="mx-4 text-peach">document</span>.<span class="mx-4 text-blue">getElementById</span>(<span class="mx-4 text-green">"myParagraph"</span>);</div>
+      <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden">paragraph.<span class="hljs-property">innerHTML</span> = <span class="mx-4 text-green">"New content for the paragraph!"</span>;</div>
+      <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden" /></pre>
   </div>
 </template>

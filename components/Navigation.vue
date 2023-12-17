@@ -54,7 +54,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex p-3 bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base">
+  <div class="flex p-6 bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base">
     <div class="w-full max-w-5xl flex justify-between items-center flex-col lg:flex-row">
       <div class="flex justify-around items-center gap-4 lg:w-fit w-full flex-wrap lg:flex-nowrap">
         <div class="flex items-center gap-3 w-full">
