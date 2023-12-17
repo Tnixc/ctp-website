@@ -56,7 +56,7 @@ export default {
 <template>
   <div class="flex p-3 bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base">
     <div class="w-full max-w-5xl flex justify-between items-center flex-col lg:flex-row">
-      <div class="flex justify-around items-center gap-4 lg:w-fit w-full flex-wrap lg:flex-nowrap ">
+      <div class="flex justify-around items-center gap-4 lg:w-fit w-full flex-wrap lg:flex-nowrap">
         <div class="flex items-center gap-3 w-full">
           <NuxtImg src="/Catppuccin.png" alt="ctp logo" class="w-12 h-12" />
           <h1 class="text-2xl font-bold select-none flex-grow text-text">
@@ -82,7 +82,7 @@ export default {
           </button>
         </div>
       </div>
-      <div v-show="isOpen" class="w-full my-7 lg:hidden block h-0.5 bg-surface0 " />
+      <div v-show="isOpen" class="w-full my-7 lg:hidden block h-0.5 bg-surface0" />
       <nav v-show="isOpen" class="flex gap-4 flex-col lg:flex-row items-end w-full lg:w-fit lg:items-center">
         <NuxtLink class="text-subtext0 hover:text-text" to="/">
           Home

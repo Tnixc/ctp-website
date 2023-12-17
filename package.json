@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@catppuccin/palette": "^0.2.0",
     "@formkit/auto-animate": "^0.8.1",
     "@nuxt/image": "^1.1.0",
     "@vueuse/motion": "^2.0.0",

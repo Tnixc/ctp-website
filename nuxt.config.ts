@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
+    '@formkit/auto-animate/nuxt',
   ],
   tailwindcss: {
     config: {
