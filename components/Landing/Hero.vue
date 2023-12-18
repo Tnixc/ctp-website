@@ -59,18 +59,21 @@ export default {
       >
         Four beautiful flavours
       </h3>
-      <div>
+      <div class="flex">
+        <div class="w-6">
+          <span id="sel" class="text-2xl text-teal block absolute"> -> </span>
+        </div>
         <div class="flex flex-col">
-          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('latte')">
+          <button class="p-2 text-xl w-fit" @click="setTheme('latte')">
             Latte
           </button>
-          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('frappe')">
+          <button class="p-2 text-xl w-fit" @click="setTheme('frappe')">
             Frappe
           </button>
-          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('macchiato')">
+          <button class="p-2 text-xl w-fit" @click="setTheme('macchiato')">
             Macchiato
           </button>
-          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('mocha')">
+          <button class="p-2 text-xl w-fit" @click="setTheme('mocha')">
             Mocha
           </button>
         </div>
@@ -107,8 +110,20 @@ export default {
   </div>
 </template>
 
-<style scoped>
-.latte{
-
+<style>
+#sel{
+  transition: transform 0.5s ease-in-out;
+}
+.latte #sel{
+  transform: translateY(4px);
+}
+.frappe #sel{
+  transform: translateY(48px);
+}
+.macchiato #sel{
+  transform: translateY(92px);
+}
+.mocha #sel{
+  transform: translateY(136px);
 }
 </style>
