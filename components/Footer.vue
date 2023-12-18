@@ -9,9 +9,9 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="flex justify-center w-full">
     <div
-      v-motion class=""
+      v-motion class="flex p-8 max-w-4xl"
       :initial="{
         y: -40,
         opacity: 0.5,
@@ -41,3 +41,19 @@ export default {
     </div>
   </div>
 </template>
+
+<style scoped>
+  .latte button:nth-child(1){
+    @apply text-rosewater underline;
+  }
+  .frappe button:nth-child(2){
+    @apply text-rosewater underline;
+  }
+  .macchiato button:nth-child(3){
+    @apply text-rosewater underline;
+  }
+  .mocha button:nth-child(4){
+    @apply text-rosewater underline;
+  }
+  .underline{text-decoration-thickness: 2px;}
+</style>

@@ -67,16 +67,16 @@ export default {
         </div>
         <div class="h-full w-0.5 bg-surface0 rounded-full" />
         <div class="flex flex-col">
-          <button class="p-2 text-xl w-fit" @click="setTheme('latte')">
+          <button class="p-2 text-xl w-fit hover:text-mauve transition-all" @click="setTheme('latte')">
             Latte
           </button>
-          <button class="p-2 text-xl w-fit" @click="setTheme('frappe')">
+          <button class="p-2 text-xl w-fit hover:text-mauve transition-all" @click="setTheme('frappe')">
             Frappe
           </button>
-          <button class="p-2 text-xl w-fit" @click="setTheme('macchiato')">
+          <button class="p-2 text-xl w-fit hover:text-mauve transition-all" @click="setTheme('macchiato')">
             Macchiato
           </button>
-          <button class="p-2 text-xl w-fit" @click="setTheme('mocha')">
+          <button class="p-2 text-xl w-fit hover:text-mauve transition-all" @click="setTheme('mocha')">
             Mocha
           </button>
         </div>
