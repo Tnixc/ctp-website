@@ -57,7 +57,9 @@ export default {
           },
         } "
       >
-        Four beautiful flavors
+        Four beautiful flavors | <Nuxt-link class="hover:underline text-text hover:text-blue transition-all" to="/palette">
+          Full palette ->
+        </Nuxt-link>
       </h3>
       <div class="flex">
         <div class="w-7">
