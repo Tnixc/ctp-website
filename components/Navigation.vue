@@ -60,12 +60,14 @@ export default {
     <div class="w-full max-w-5xl flex justify-between items-center flex-col lg:flex-row">
       <div class="flex justify-around items-center gap-4 lg:w-fit w-full flex-wrap lg:flex-nowrap">
         <div
-          class="flex items-center gap-3 w-full"
+          class="flex items-center gap-3 w-full items-center"
         >
-          <NuxtImg src="/Catppuccin.png" alt="ctp logo" class="w-12 h-12" />
-          <h1 class="text-2xl font-bold select-none flex-grow text-text">
-            Catppuccin
-          </h1>
+          <Nuxt-link to="/" class="flex gap-3 items-center">
+            <NuxtImg src="/Catppuccin.png" alt="ctp logo" class="w-12 h-12" />
+            <h1 class="text-2xl font-bold select-none flex-grow text-text">
+              Catppuccin
+            </h1>
+          </Nuxt-link>
           <button class="lg:hidden block" @click="toggleVisibility">
             <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z" /></svg>
             <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z" /></svg>
