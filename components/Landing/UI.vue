@@ -13,7 +13,7 @@
     <section
       class="select-none overflow-hidden font-flow flex-grow w-full h-96 relative"
     >
-      <div class="relative translate-x-1/4">
+      <div class="relative lg:translate-x-1/4 translate-x-[15%]">
         <div class="absolute translate-x-32 translate-y-12">
           <div class="ring-rosewater bg-surface0 ring-2 p-2 px-6 rounded-full">
             <span class="text-sky">Something</span> and then something else

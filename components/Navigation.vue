@@ -57,7 +57,7 @@ export default {
   <div
     class="flex p-6 bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base top-0 sticky z-50"
   >
-    <div class="w-full max-w-5xl flex justify-between items-center flex-col lg:flex-row">
+    <div class="w-full max-w-6xl flex justify-between items-center flex-col lg:flex-row">
       <div class="flex justify-around items-center gap-4 lg:w-fit w-full flex-wrap lg:flex-nowrap">
         <div
           class="flex items-center gap-3 w-full items-center"
@@ -74,7 +74,7 @@ export default {
             <span class="sr-only">Toggle Menu</span>
           </button>
         </div>
-        <div
+        <!-- <div
           v-show="isOpen" v-motion class="flex gap-4 lg:gap-2 text-subtext1 flex-col lg:flex-row items-end w-full lg:w-fit"
           :initial="{
             y: -40,
@@ -102,7 +102,7 @@ export default {
           <button class="p-1 relative theme" @click="setTheme('mocha')">
             Mocha
           </button>
-        </div>
+        </div> -->
       </div>
       <div v-show="isOpen" class="w-full my-7 lg:hidden block h-0.5 bg-surface0" />
       <nav
