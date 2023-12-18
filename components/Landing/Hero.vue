@@ -94,8 +94,9 @@ export default {
           type: 'keyframes',
           ease: 'easeOut',
         },
-      } " class="text-2xl font-flow flex flex-col max-w-xl p-5 h-fit rounded-lg select-none overflow-hidden mt-20 bg-gradient-to-r from-base to-mantle"
+      } " class="text-2xl font-flow flex flex-col max-w-xl p-5 h-fit rounded-lg select-none overflow-hidden mt-20 bg-gradient-to-r from-base to-mantle relative"
     >
+      <div v-motion-slide-up :delay="1000" class="absolute bottom-0 left-0 p-4 pt-0 bg-transparent w-full z-10 backdrop-blur-md border-t-2 border-overlay1"><span class="text-rosewater"><span class="text-yellow">J</span> catppuccin js</span></div>
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> i<span class="text-teal"> = </span><span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) {</div>
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Count:"</span>, i);</div>
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden"> }</div>
@@ -104,7 +105,7 @@ export default {
       <div v-motion-slide-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span> colors<span class="text-teal"> = </span>[<span class="mx-4 text-green">"Red"</span>, <span class="mx-4 text-green">"Green"</span>, <span class="mx-4 text-green">"Blue"</span>];</div>
       <div v-motion-slide-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> index <span class="mx-4 text-mauve">in</span> colors) {</div>
       <div v-motion-slide-left :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Color:"</span>, colors[index]);</div>
-      <div v-motion-slide-left :delay="1000" class="line overflow-hidden"><span class="text-yellow"> + something </span></div>
+      <div v-motion-slide-left :delay="1000" class="line overflow-hidden"> + something</div>
 
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-overlay0">// Assuming there is an HTML element with the id "myParagraph"</span></div>
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span><span class="underline decoration-red decoration-8"> paragraph<span class="text-teal"> = </span></span><span class="mx-4 text-peach">document</span>.<span class="mx-4 text-blue">getElementById</span>(<span class="mx-4 text-green">"myParagraph"</span>);</div>

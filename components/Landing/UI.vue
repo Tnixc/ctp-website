@@ -1,10 +1,38 @@
+<script>
+export default {
+  data() {
+    return {
+      ports: '255',
+    }
+  },
+  async mounted() {
+    async function fetchData() {
+      let page = 1
+      let totalResponse = []
+      while (true) {
+        const response = await fetch(`https://api.github.com/orgs/catppuccin/repos?per_page=100&page=${page}`)
+        const data = await response.json()
+        if (data.length < 100) {
+          totalResponse = totalResponse.concat(data)
+          break
+        }
+        totalResponse = totalResponse.concat(data)
+        page++
+      }
+      return totalResponse.length
+    }
+    this.ports = await fetchData()
+  },
+}
+</script>
+
 <template>
   <div class="flex p-10 lg:p-32 flex-col gap-10 lg:gap-20 lg:flex-row lg:pl-48">
     <div class="flex-grow">
       <h1
         class="text-3xl mt-10 font-bold"
       >
-        What is Catppuccin?
+        {{ ports }} Ports
       </h1>
       <p class="text-subtext1 leading-8 pt-4 max-w-xl">
         Catppuccin is a community-driven pastel theme that aims to be the middle ground between low and high contrast themes. It consists of 4 soothing warm palettes with 26 eye-candy colors each, perfect for coding, designing, and much more!
@@ -20,7 +48,7 @@
           </div>
         </div>
         <div class="absolute translate-x-0 translate-y-0">
-          <div class="px-2 w-10 flex gap-3">
+          <div class="px-2 w-10 flex gap-4">
             <div class="text-center">
               <span class="text-text bg-surface1 h-10 rounded px-2 py-1 text-xs select-none">
                 Info
