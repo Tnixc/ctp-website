@@ -14,6 +14,30 @@ useHead({
 })
 </script>
 
+<script>
+export default {
+  mounted() {
+    const theme = localStorage.getItem('theme')
+    if (theme !== 'latte' && theme !== 'frappe' && theme !== 'macchiato' && theme !== 'mocha') {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        this.setTheme('mocha')
+      else
+        this.setTheme('latte')
+    }
+    else {
+      this.setTheme(theme)
+    }
+  },
+  methods: {
+    setTheme(theme) {
+      document.body.classList.remove('latte', 'frappe', 'macchiato', 'mocha')
+      localStorage.setItem('theme', theme)
+      document.body.classList.add(theme)
+    },
+  },
+}
+</script>
+
 <template>
   <Navigation />
   <div class="bg-base text-text overflow-y-scroll">

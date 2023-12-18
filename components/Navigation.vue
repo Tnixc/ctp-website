@@ -7,18 +7,6 @@ export default {
     }
   },
   async mounted() {
-    // Theme stuff
-    const theme = localStorage.getItem('theme')
-    if (theme !== 'latte' && theme !== 'frappe' && theme !== 'macchiato' && theme !== 'mocha') {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        this.setTheme('mocha')
-      else
-        this.setTheme('latte')
-    }
-    else {
-      this.setTheme(theme)
-    }
-
     // Navigation stuff
     if (window.innerWidth >= 1024)
       this.isOpen = true
@@ -43,11 +31,6 @@ export default {
   methods: {
     toggleVisibility() {
       this.isOpen = !this.isOpen
-    },
-    setTheme(theme) {
-      document.body.classList.remove('latte', 'frappe', 'macchiato', 'mocha')
-      localStorage.setItem('theme', theme)
-      document.body.classList.add(theme)
     },
   },
 }
@@ -74,35 +57,6 @@ export default {
             <span class="sr-only">Toggle Menu</span>
           </button>
         </div>
-        <!-- <div
-          v-show="isOpen" v-motion class="flex gap-4 lg:gap-2 text-subtext1 flex-col lg:flex-row items-end w-full lg:w-fit"
-          :initial="{
-            y: -40,
-            opacity: 0.5,
-          }"
-          :enter="{
-            y: 0,
-            opacity: 1,
-            transition: {
-              delay: 100,
-              type: 'keyframes',
-              ease: 'easeOut',
-            },
-          }"
-        >
-          <button class="p-1 relative theme" @click="setTheme('latte')">
-            Latte
-          </button>
-          <button class="p-1 relative theme" @click="setTheme('frappe')">
-            Frappe
-          </button>
-          <button class="p-1 relative theme" @click="setTheme('macchiato')">
-            Macchiato
-          </button>
-          <button class="p-1 relative theme" @click="setTheme('mocha')">
-            Mocha
-          </button>
-        </div> -->
       </div>
       <div v-show="isOpen" class="w-full my-7 lg:hidden block h-0.5 bg-surface0" />
       <nav
