@@ -1,5 +1,5 @@
 <template>
-  <div class="flex p-10 lg:p-28 flex-col gap-0 lg:flex-row">
+  <div class="flex p-10 lg:p-28 flex-col gap-10 lg:gap-0 lg:flex-row">
     <div class="flex-grow">
       <h1
         class="text-3xl mt-10 font-bold"

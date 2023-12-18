@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class="lg:p-28 p-10 flex flex-wrap lg:flex-nowrap gap-5 justify-between">
+  <section class="lg:p-28 p-10 flex flex-wrap lg:flex-nowrap gap-5 justify-between">
     <div class="flex-col gap-6 flex">
       <h1
         id="landing-title" v-motion class="text-5xl mt-10 font-bold" :initial=" {
@@ -110,7 +110,7 @@ export default {
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span><span class="underline decoration-red decoration-8"> paragraph<span class="text-teal"> = </span></span><span class="mx-4 text-peach">document</span>.<span class="mx-4 text-blue">getElementById</span>(<span class="mx-4 text-green">"myParagraph"</span>);</div>
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden">    paragraph.<span class="hljs-property">innerHTML</span><span class="text-teal"> = </span><span class="mx-4 text-green">"New content for the paragraph!"</span>;</div>
       <div v-motion-slide-right :delay="1000" class="line overflow-hidden" /></pre>
-  </div>
+  </section>
 </template>
 
 <style>
