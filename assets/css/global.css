@@ -118,3 +118,6 @@
   color: var(--base);
   text-shadow: none;
 }
+body{
+  background-color: rgb(30, 30, 46);
+}

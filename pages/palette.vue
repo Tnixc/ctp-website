@@ -75,7 +75,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .inline-link {
   text-shadow:
     -1px -1px 0 var(--base),

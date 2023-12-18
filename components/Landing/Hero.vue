@@ -1,6 +1,16 @@
+<script>
+export default {
+  methods: { setTheme(theme) {
+    document.body.classList.remove('latte', 'frappe', 'macchiato', 'mocha')
+    localStorage.setItem('theme', theme)
+    document.body.classList.add(theme)
+  } },
+}
+</script>
+
 <template>
-  <div class="lg:p-40 p-10 h-screen flex flex-wrap lg:flex-nowrap">
-    <div class="flex-col gap-6 flex ">
+  <div class="lg:p-28 p-10 h-screen flex flex-wrap lg:flex-nowrap gap-5 justify-between">
+    <div class="flex-col gap-6 flex">
       <h1
         v-motion class="text-5xl font-bold" :initial=" {
           y: 100,
@@ -49,6 +59,22 @@
       >
         Four beautiful flavours
       </h3>
+      <div>
+        <div class="flex flex-col">
+          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('latte')">
+            Latte
+          </button>
+          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('frappe')">
+            Frappe
+          </button>
+          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('macchiato')">
+            Macchiato
+          </button>
+          <button class="p-2 text-xl w-fit relative theme" @click="setTheme('mocha')">
+            Mocha
+          </button>
+        </div>
+      </div>
     </div>
     <pre
       v-motion :initial=" {
@@ -80,3 +106,9 @@
       <div v-motion-slide-visible-right :delay="1000" class="line overflow-hidden" /></pre>
   </div>
 </template>
+
+<style scoped>
+.latte{
+
+}
+</style>

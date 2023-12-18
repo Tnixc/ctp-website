@@ -136,7 +136,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 *{
   transition: background-color 0.5s ease;
 }
