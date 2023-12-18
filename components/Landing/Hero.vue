@@ -57,7 +57,7 @@ export default {
           },
         } "
       >
-        Four beautiful flavours
+        Four beautiful flavors
       </h3>
       <div class="flex">
         <div class="w-6">
