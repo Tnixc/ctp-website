@@ -55,7 +55,7 @@ export default {
 
 <template>
   <div
-    class="flex p-6 bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base top-0 sticky"
+    class="flex p-6 bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base top-0 sticky z-50"
   >
     <div class="w-full max-w-5xl flex justify-between items-center flex-col lg:flex-row">
       <div class="flex justify-around items-center gap-4 lg:w-fit w-full flex-wrap lg:flex-nowrap">

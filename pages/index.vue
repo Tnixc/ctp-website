@@ -1,3 +1,4 @@
 <template>
   <LandingHero />
+  <LandingUI />
 </template>
