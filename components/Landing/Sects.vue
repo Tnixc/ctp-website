@@ -1,7 +1,7 @@
 
 
 <template>
-  <section class="flex p-10 lg:p-28 gap-5">
+  <section class="flex p-10 lg:p-48 gap-5">
     <div class="bg-surface0 rounded-2xl p-5 ring-2 ring-surface1 ">
       <h1 class="text-3xl font-bold pb-7">
         🧠 Design Philosophy
