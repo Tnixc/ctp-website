@@ -62,9 +62,9 @@ export default {
         <div
           class="flex items-center gap-3 w-full items-center"
         >
-          <Nuxt-link to="/" class="flex gap-3 items-center">
+          <Nuxt-link to="/" class="flex gap-3 items-center flex-grow">
             <NuxtImg src="/Catppuccin.png" alt="ctp logo" class="w-12 h-12" />
-            <h1 class="text-2xl font-bold select-none flex-grow text-text">
+            <h1 class="text-2xl font-bold select-none text-text">
               Catppuccin
             </h1>
           </Nuxt-link>
