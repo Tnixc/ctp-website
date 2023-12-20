@@ -14,7 +14,7 @@ export default {
   <div class="flex p-10 flex-col gap-10 lg:gap-20 lg:flex-row pb-0 ">
     <div class="flex-grow">
       <h1
-        class="text-3xl mt-10 font-bold flex items-center gap-8"
+        class="text-3xl mt-10 font-bold flex items-center gap-8 flex-wrap"
       >
         {{ ports }} Ports
         <nuxt-link to="/ports" class="text-xl p-3 bg-rosewater rounded-xl text-crust transition-all hover:translate-y-0.5">
