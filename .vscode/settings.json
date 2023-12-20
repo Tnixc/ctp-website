@@ -39,5 +39,7 @@
     "jsonc",
     "yaml",
     "toml"
-  ]
+  ],
+  "css.validate": false, // Disable default CSS built-in lint
+  "stylelint.enable": true // Enable Stylelint
 }
