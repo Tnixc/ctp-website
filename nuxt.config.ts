@@ -3,6 +3,7 @@
 export default defineNuxtConfig({
   css: ['@/assets/css/global.css'],
   devtools: { enabled: true },
+  ssr: true,
   modules: [
     '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',

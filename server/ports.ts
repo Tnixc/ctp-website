@@ -1,7 +1,5 @@
 import YAML from 'yaml'
 
-// TODO: Make it so that the number of ports is len normal + len userstyles
-
 async function fetchAndParseYaml(url: string) {
   const response = await fetch(url)
   const yamlText = await response.text()
@@ -38,7 +36,6 @@ const NormalT = await fetchAndParseYaml('https://raw.githubusercontent.com/catpp
 const StyleT = await fetchAndParseYaml('https://raw.githubusercontent.com/catppuccin/userstyles/main/scripts/userstyles.yml')
 const resNormal = parseNormal(NormalT)
 const resStyle = parseStyle(StyleT)
-export const something = (resStyle).concat(resNormal)
-export const len = something.length
 
-// export const something = await parseNormal(parsedYaml)
+export const ports = (resStyle).concat(resNormal)
+export const len = ports.length

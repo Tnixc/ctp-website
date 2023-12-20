@@ -1,14 +1,23 @@
-<script lang="ts">
-import { something } from '@/server/ports'
+<script>
+import { ports } from '@/server/ports'
 
 export default {
-  mounted() {
-    /* eslint-disable no-console */
-    console.log(something)
+  data() {
+    return {
+      dataArray: ports,
+    }
   },
 }
 </script>
 
 <template>
-  <div>1</div>
+  <div v-for="(item, index) in dataArray" :key="index" class="custom-div">
+    <h1>{{ item[0] }}</h1>
+    <div class="category">
+      {{ item[1] }}
+    </div>
+    <div :style="{ backgroundColor: `var(--${item[2]})` }">
+      <a :href="item[3]">Link</a>
+    </div>
+  </div>
 </template>
