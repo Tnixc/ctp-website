@@ -3,6 +3,7 @@ import { something } from '@/server/ports'
 
 export default {
   mounted() {
+    /* eslint-disable no-console */
     console.log(something)
   },
 }
