@@ -16,7 +16,8 @@
       </h1>
       <p class="leading-6 text-subtext1">
         Catppuccin consists of 4 beautiful pastel color palettes, named flavors.
-        If you want to use them for your own project, refer to our <a class="text-blue hover:underline" >style</a> guide for general use cases and guidelines. Additionally, you can find integrations with popular frameworks and tools in <a class="text-blue hover:underline" href="https://github.com/catppuccin/palette">catppuccin/palette.</a></p>
+        If you want to use them for your own project, refer to our <a class="text-blue hover:underline" href="https://github.com/catppuccin/palettehttps://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md">style guide</a> for general use cases and guidelines. Additionally, you can find integrations with popular frameworks and tools in <a class="text-blue hover:underline" href="https://github.com/catppuccin/palette">catppuccin/palette.</a>
+      </p>
       <div class="text-subtext1 flex-col flex gap-2" />
     </div>
   </section>
@@ -24,4 +25,4 @@
 
 <style scoped>
 .underline{text-decoration-thickness: 2px;}
-</astyle>
+</style>
