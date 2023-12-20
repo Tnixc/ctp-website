@@ -1,4 +1,3 @@
 <template>
-  <PortsSearchBox />
   <PortsList />
 </template>

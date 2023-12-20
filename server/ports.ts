@@ -11,8 +11,9 @@ function parseNormal(obj: { ports: { [key: string]: any } }) {
   for (const key in obj.ports) {
     const port = obj.ports[key]
     const color = port.color || 'surface1'
+    const hidden = false
     const link = `https://github.com/catppuccin/${key}`
-    result.push([port.name, port.category, color, link])
+    result.push([port.name, port.category.replace(/_/g, ' '), color, link, key, hidden])
   }
   return result
 }
@@ -24,10 +25,11 @@ function parseStyle(obj: { userstyles: { [key: string]: any } }) {
   }
   for (const key in obj.userstyles) {
     const name = slashIntoArray(obj.userstyles[key].name)
-    const category = obj.userstyles[key].category
+    const category = obj.userstyles[key].category.replace(/_/g, ' ')
     const color = 'surface1'
+    const hidden = false
     const link = `https://github.com/catppuccin/userstyles/tree/main/styles/${key}`
-    result.push([name, category, color, link])
+    result.push([name, category, color, link, key, hidden])
   }
   return result
 }
