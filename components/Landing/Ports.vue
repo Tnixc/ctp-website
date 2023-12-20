@@ -84,7 +84,7 @@ export default {
               </div>
               <div class="flex-1">
                 <input
-                  class=" border bg-mantle border-surface0 text-text px-4 py-2 rounded-r focus:border-blue focus:shadow-outline outline-none"
+                  class="border bg-mantle border-surface0 text-text px-4 py-2 rounded-r focus:border-blue focus:shadow-outline outline-none"
                   type="text" placeholder="@username..."
                 >
               </div>
