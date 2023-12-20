@@ -41,7 +41,7 @@ export default {
 <template>
   <Navigation />
   <div class="bg-base text-text overflow-y-scroll">
-    <NuxtPage />
+    <NuxtPage class="pt-20" />
     <Footer />
   </div>
 </template>

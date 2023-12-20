@@ -1,3 +1,4 @@
 <template>
-  <div />
+  <PortsSearchBox />
+  <PortsList />
 </template>
