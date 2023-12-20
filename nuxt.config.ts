@@ -39,7 +39,6 @@ export default defineNuxtConfig({
           base: 'var(--base)',
           mantle: 'var(--mantle)',
           crust: 'var(--crust)',
-
         },
         extend: {
           fontFamily: {
