@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-base text-text min-h-screen">
+  <div class="bg-base text-text min-h-screen p-5">
     <div class=" flex flex-col gap-4 items-center p-5">
       <h1 class="text-3xl font-extrabold tracking-tight mb-3 p-5">
         Palette
