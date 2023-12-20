@@ -52,19 +52,19 @@ export default {
           </div>
         </summary>
         <div class="overflow-x-scroll bg-mantle p-4 rounded-lg mt-8">
-          <table class="w-full">
+          <table class="w-[700px] mx-auto">
             <tr v-for=" colorKey in colors " :key=" colorKey " class="grid grid-cols-8 place-content-center">
-              <td class="p-2 flex flex-row items-center gap-x-2 col-span-2">
+              <td class="p-2 w-min-fit flex flex-row items-center gap-x-2 col-span-2">
                 <span :style=" { backgroundColor: variants[flavor][colorKey].hex } " class="block w-4 h-4 rounded-full" />
                 <span class="font-semibold text-sm ">{{ colorKey[0].toUpperCase() + colorKey.slice(1) }}</span>
               </td>
-              <td class="p-2">
+              <td class="p-2 w-min-fit">
                 <PaletteCopyButton :text=" variants[flavor][colorKey].hex " />
               </td>
-              <td class="p-2 col-span-2">
+              <td class="p-2 w-min-fit col-span-2">
                 <PaletteCopyButton :text=" variants[flavor][colorKey].rgb " />
               </td>
-              <td class="p-2">
+              <td class="p-2 w-min-fit">
                 <PaletteCopyButton :text=" variants[flavor][colorKey].hsl " />
               </td>
             </tr>
