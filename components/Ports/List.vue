@@ -27,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <div class="w-screen max-w-5xl min-h-screen">
+  <div class="w-screen max-w-5xl min-h-screen mx-auto">
     <div class="p-5">
       <input v-model="textInput" class="w-full max-w-xl border-2 bg-mantle border-surface0 text-text px-4 py-2 rounded-lg focus:border-blue focus:shadow-outline outline-none" placeholder="Search..." @input="res">
     </div>
