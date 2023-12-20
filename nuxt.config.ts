@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  vite: {
+    build: {
+      target: 'esnext', // browsers can handle the latest ES features
+    },
+  },
   css: ['@/assets/css/global.css'],
   devtools: { enabled: true },
   ssr: true,

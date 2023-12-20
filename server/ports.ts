@@ -1,9 +1,9 @@
 import YAML from 'yaml'
 
-async function fetchAndParseYaml(url: string) {
-  const response = await fetch(url)
-  const yamlText = await response.text()
-  return YAML.parse(yamlText)
+function fetchAndParseYaml(url: string) {
+  return fetch(url)
+    .then(response => response.text())
+    .then(yamlText => YAML.parse(yamlText))
 }
 
 function parseNormal(obj: { ports: { [key: string]: any } }) {
@@ -34,10 +34,29 @@ function parseStyle(obj: { userstyles: { [key: string]: any } }) {
   return result
 }
 
-const NormalT = await fetchAndParseYaml('https://raw.githubusercontent.com/catppuccin/catppuccin/main/resources/ports.yml')
-const StyleT = await fetchAndParseYaml('https://raw.githubusercontent.com/catppuccin/userstyles/main/scripts/userstyles.yml')
-const resNormal = parseNormal(NormalT)
-const resStyle = parseStyle(StyleT)
+// Stupid ass workaround to avoid top-level await
+/* eslint-disable import/no-mutable-exports */
+let exportedPorts
+let exportedLen
 
-export const ports = (resStyle).concat(resNormal)
-export const len = ports.length
+async function fetchDataAndExport() {
+  try {
+    const normalPromise = fetchAndParseYaml('https://raw.githubusercontent.com/catppuccin/catppuccin/main/resources/ports.yml')
+    const stylePromise = fetchAndParseYaml('https://raw.githubusercontent.com/catppuccin/userstyles/main/scripts/userstyles.yml')
+
+    const [NormalT, StyleT] = await Promise.all([normalPromise, stylePromise])
+
+    const resNormal = parseNormal(NormalT)
+    const resStyle = parseStyle(StyleT)
+
+    exportedPorts = resStyle.concat(resNormal)
+    exportedLen = exportedPorts.length
+  }
+  catch (error) {
+    console.error('Error:', error)
+  }
+}
+
+fetchDataAndExport()
+
+export { exportedPorts as ports, exportedLen as len }
