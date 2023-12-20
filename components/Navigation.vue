@@ -87,7 +87,7 @@ export default {
         <a class="text-subtext0 hover:text-text px-2 py-1 bg-surface0 rounded-md flex gap-1.5" href="https://github.com/catppuccin">
           Github
           <span class="text-yellow">{{ stars }}★</span></a>
-        <a class="text-subtext0 hover:text-text" href="">Donate</a>
+        <a class="text-subtext0 hover:text-text" href="https://opencollective.com/catppuccin">Donate</a>
       </nav>
       <div v-show="isOpen" class="w-full mt-7 lg:hidden block h-0.5 bg-surface0" />
     </div>
@@ -118,6 +118,6 @@ export default {
   opacity: 1;
 }
 .router-link-active {
-  color: var(--text);
+  color: var(--blue);
 }
 </style>

@@ -27,16 +27,16 @@ export default {
 </script>
 
 <template>
-  <div class="w-screen max-w-5xl">
+  <div class="w-screen max-w-5xl min-h-screen">
     <div class="p-5">
-      <input v-model="textInput" class="w-full max-w-xl border bg-mantle border-surface0 text-text px-4 py-2 rounded-lg focus:border-blue focus:shadow-outline outline-none" placeholder="Search..." @input="res">
+      <input v-model="textInput" class="w-full max-w-xl border-2 bg-mantle border-surface0 text-text px-4 py-2 rounded-lg focus:border-blue focus:shadow-outline outline-none" placeholder="Search..." @input="res">
     </div>
     <section class="flex w-full">
       <div class="flex flex-wrap max-w-5xl p-5 gap-3 w-full">
         <div
           v-for="(item, index) in dataArray"
           :key="index" :h="item[5]" :style="{ borderColor: `var(--${item[2]})` }"
-          class="border-2 p-4 flex-grow rounded-xl bg-surface0 card lg:w-1/5 md:w-1/3 w-full"
+          class="border-l-2 p-4 flex-grow rounded-xl bg-surface0 card lg:w-1/5 md:w-1/3 w-full"
         >
           <h1 class="text-lg font-bold">
             {{ item[0] }}

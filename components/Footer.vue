@@ -1,22 +1,22 @@
 <script>
 export default {
-  methods: { setTheme(theme) {
-    document.body.classList.remove('latte', 'frappe', 'macchiato', 'mocha')
-    localStorage.setItem('theme', theme)
-    document.body.classList.add(theme)
-  } },
+  methods: {
+    setTheme(theme) {
+      document.body.classList.remove('latte', 'frappe', 'macchiato', 'mocha')
+      localStorage.setItem('theme', theme)
+      document.body.classList.add(theme)
+    },
+  },
 }
 </script>
 
 <template>
-  <div class="flex justify-center w-full">
+  <div class="flex justify-between w-full flex-wrap">
     <div
-      v-motion class="flex p-8 max-w-4xl"
-      :initial="{
+      v-motion class="flex p-8 max-w-4xl" :initial=" {
         y: -40,
         opacity: 0.5,
-      }"
-      :enter="{
+      } " :enter=" {
         y: 0,
         opacity: 1,
         transition: {
@@ -24,7 +24,7 @@ export default {
           type: 'keyframes',
           ease: 'easeOut',
         },
-      }"
+      } "
     >
       <button class="p-1 relative theme" @click="setTheme('latte')">
         Latte
@@ -39,21 +39,33 @@ export default {
         Mocha
       </button>
     </div>
+    <div class="flex p-8">
+      <a href="https://github.com/Catppuccin" class="">Github</a>
+      <a href="https://discord.com/servers/catppuccin-907385605422448742" class="">Discord</a>
+      <a href="https://twitter.com/catppuccintheme" class="">Twitter</a>
+      <a href="https://fosstodon.org/@catppuccin" class="">Github</a>
+    </div>
   </div>
 </template>
 
 <style scoped>
-  .latte button:nth-child(1){
-    @apply text-rosewater;
-  }
-  .frappe button:nth-child(2){
-    @apply text-rosewater;
-  }
-  .macchiato button:nth-child(3){
-    @apply text-rosewater;
-  }
-  .mocha button:nth-child(4){
-    @apply text-rosewater;
-  }
-  .underline{text-decoration-thickness: 2px;}
+.latte button:nth-child(1) {
+  @apply text-rosewater;
+}
+
+.frappe button:nth-child(2) {
+  @apply text-rosewater;
+}
+
+.macchiato button:nth-child(3) {
+  @apply text-rosewater;
+}
+
+.mocha button:nth-child(4) {
+  @apply text-rosewater;
+}
+
+.underline {
+  text-decoration-thickness: 2px;
+}
 </style>
