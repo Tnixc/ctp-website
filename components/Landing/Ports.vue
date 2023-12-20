@@ -1,33 +1,17 @@
 <script>
+import { len } from '@/server/ports'
+
 export default {
   data() {
     return {
-      ports: '255',
+      ports: len,
     }
-  },
-  async mounted() {
-    async function fetchData() {
-      let page = 1
-      let totalResponse = []
-      while (true) {
-        const response = await fetch(`https://api.github.com/orgs/catppuccin/repos?per_page=100&page=${page}`)
-        const data = await response.json()
-        if (data.length < 100) {
-          totalResponse = totalResponse.concat(data)
-          break
-        }
-        totalResponse = totalResponse.concat(data)
-        page++
-      }
-      return totalResponse.length
-    }
-    this.ports = await fetchData()
   },
 }
 </script>
 
 <template>
-  <div class="flex p-10 lg:p-32 flex-col gap-10 lg:gap-20 lg:flex-row lg:pl-48 pb-0 ">
+  <div class="flex p-10 flex-col gap-10 lg:gap-20 lg:flex-row pb-0 ">
     <div class="flex-grow">
       <h1
         class="text-3xl mt-10 font-bold flex items-center gap-8"

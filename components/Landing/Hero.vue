@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <section class="lg:px-48 p-10 pt-48 flex flex-wrap lg:flex-nowrap gap-5 justify-between">
+  <section class="p-10 pt-48 flex flex-wrap lg:flex-nowrap gap-5 justify-between">
     <div class="flex-col gap-6 flex">
       <h1
         id="landing-title" v-motion class="text-5xl mt-10 font-bold" :initial=" {

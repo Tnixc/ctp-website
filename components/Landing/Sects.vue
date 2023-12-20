@@ -1,5 +1,6 @@
 <template>
-  <section class="flex gap-5 lg:px-48 p-10">
+  <section class="flex gap-5 items-center justify-center p-10">
+    <div class="flex flex-col gap-5">
     <div class="bg-surface0 rounded-2xl p-5 ring-2 ring-surface1 ">
       <h1 class="text-3xl font-bold pb-7">
         🧠 Design Philosophy
@@ -10,7 +11,7 @@
         <p><b class="text-text underline decoration-2 underline-offset-2 decoration-rosewater">Harmony is superior to dissonance</b>: vivacious colors must complement each other.</p>
       </div>
     </div>
-    <div class="bg-surface0 rounded-2xl p-5 ring-2 ring-surface1 ring-surface w-fit">
+    <div class="bg-surface0 rounded-2xl p-5 ring-2 ring-surface1 ring-surface">
       <h1 class="text-3xl font-bold pb-7">
         🎨 Palette
       </h1>
@@ -20,5 +21,6 @@
       </p>
       <div class="text-subtext1 flex-col flex gap-2" />
     </div>
+  </div>
   </section>
 </template>
