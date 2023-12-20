@@ -5,6 +5,11 @@ useHead({
   },
   link: [
     {
+      rel: 'icon',
+      type: 'image/xicon',
+      href: '/public/favicon.ico',
+    },
+    {
       rel: 'preconnect',
       href: 'https://fonts.googleapis.com',
     },
