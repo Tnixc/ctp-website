@@ -1,6 +1,14 @@
 <script setup>
 useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
   link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png',
+    },
     {
       rel: 'preconnect',
       href: 'https://fonts.googleapis.com',
@@ -11,6 +19,18 @@ useHead({
       crossorigin: '',
     },
   ],
+})
+useSeoMeta({
+  title: 'Catppuccin',
+  description: 'A soothing pastel theme for the high-spirited! ',
+  ogTitle: 'Catppuccin',
+  ogDescription: 'A soothing pastel theme for the high-spirited! ',
+  ogImage: 'https://i.imgur.com/HTvdw1i.png',
+  ogUrl: '[og:url]',
+  twitterTitle: 'Catppuccin',
+  twitterDescription: 'A soothing pastel theme for the high-spirited! ',
+  twitterImage: 'https://i.imgur.com/HTvdw1i.png',
+  twitterCard: 'summary',
 })
 </script>
 
@@ -42,8 +62,8 @@ export default {
   <Navigation />
   <div class="bg-base text-text overflow-y-scroll flex justify-center">
     <div class="max-w-6xl">
-    <NuxtPage class="pt-20" />
-    <Footer />
-  </div>
+      <NuxtPage class="pt-20" />
+      <Footer />
+    </div>
   </div>
 </template>
