@@ -44,16 +44,16 @@ export default {
 
 <style scoped>
   .latte button:nth-child(1){
-    @apply text-rosewater underline;
+    @apply text-rosewater;
   }
   .frappe button:nth-child(2){
-    @apply text-rosewater underline;
+    @apply text-rosewater;
   }
   .macchiato button:nth-child(3){
-    @apply text-rosewater underline;
+    @apply text-rosewater;
   }
   .mocha button:nth-child(4){
-    @apply text-rosewater underline;
+    @apply text-rosewater;
   }
   .underline{text-decoration-thickness: 2px;}
 </style>

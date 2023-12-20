@@ -32,8 +32,10 @@ export default {
       <h1
         class="text-3xl mt-10 font-bold flex items-center gap-8"
       >
-        {{ ports }} Ports 
-        <nuxt-link to="/ports" class="text-xl p-4 bg-rosewater rounded-xl text-crust transition-all hover:translate-y-1">See them all -></nuxt-link>
+        {{ ports }} Ports
+        <nuxt-link to="/ports" class="text-xl p-3 bg-rosewater rounded-xl text-crust transition-all hover:translate-y-0.5">
+          See them all ->
+        </nuxt-link>
       </h1>
       <p class="text-subtext1 leading-8 pt-4 max-w-2xl">
         Catppuccin is a community-driven pastel theme that aims to be the middle ground between low and high contrast themes. It consists of 4 soothing warm palettes with 26 eye-candy colors each, perfect for coding, designing, and much more!
