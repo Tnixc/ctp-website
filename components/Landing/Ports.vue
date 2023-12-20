@@ -30,18 +30,19 @@ export default {
   <div class="flex p-10 lg:p-32 flex-col gap-10 lg:gap-20 lg:flex-row lg:pl-48 pb-0 ">
     <div class="flex-grow">
       <h1
-        class="text-3xl mt-10 font-bold"
+        class="text-3xl mt-10 font-bold flex items-center gap-8"
       >
-        {{ ports }} Ports
+        {{ ports }} Ports 
+        <nuxt-link to="/ports" class="text-xl p-4 bg-rosewater rounded-xl text-crust transition-all hover:translate-y-1">See them all -></nuxt-link>
       </h1>
-      <p class="text-subtext1 leading-8 pt-4 max-w-xl">
+      <p class="text-subtext1 leading-8 pt-4 max-w-2xl">
         Catppuccin is a community-driven pastel theme that aims to be the middle ground between low and high contrast themes. It consists of 4 soothing warm palettes with 26 eye-candy colors each, perfect for coding, designing, and much more!
       </p>
     </div>
     <section
       class="select-none overflow-hidden font-flow flex-grow w-full h-96 relative"
     >
-      <div class="relative lg:translate-x-1/4 translate-x-[15%]">
+      <div class="relative translate-x-[15%]">
         <div class="absolute translate-x-32 translate-y-12">
           <div class="ring-rosewater bg-surface0 ring-2 p-2 px-6 rounded-full">
             <span class="text-sky">Something</span> and then something else
@@ -50,7 +51,7 @@ export default {
         <div class="absolute translate-x-0 translate-y-0">
           <div class="px-2 w-10 flex gap-4">
             <div class="text-center">
-              <span class="text-text bg-surface1 h-10 rounded px-2 py-1 text-xs select-none">
+              <span class="text-crust bg-mauve h-10 rounded px-2 py-1 text-xs select-none">
                 Info
               </span>
             </div>

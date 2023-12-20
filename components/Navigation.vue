@@ -38,7 +38,7 @@ export default {
 
 <template>
   <div
-    class="flex p-6 bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base top-0 sticky z-50"
+    class="flex p-6 bg-mantle lg:bg-base justify-center text-text flex-col lg:flex-row text-xl lg:text-base top-0 fixed z-50 left-0 right-0"
   >
     <div class="w-full max-w-6xl flex justify-between items-center flex-col lg:flex-row">
       <div class="flex justify-around items-center gap-4 lg:w-fit w-full flex-wrap lg:flex-nowrap">
@@ -89,6 +89,7 @@ export default {
           <span class="text-yellow">{{ stars }}★</span></a>
         <a class="text-subtext0 hover:text-text" href="">Donate</a>
       </nav>
+      <div v-show="isOpen" class="w-full mt-7 lg:hidden block h-0.5 bg-surface0" />
     </div>
   </div>
 </template>

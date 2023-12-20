@@ -15,6 +15,7 @@
     "@catppuccin/palette": "^0.2.0",
     "@formkit/auto-animate": "^0.8.1",
     "@nuxt/image": "^1.1.0",
+    "@nuxtjs/tailwindcss": "^6.10.1",
     "@vueuse/motion": "^2.0.0",
     "tailwindcss": "^3.3.6",
     "tailwindcss-themer": "^4.0.0"

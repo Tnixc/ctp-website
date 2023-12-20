@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <section class="lg:px-48 p-10 flex flex-wrap lg:flex-nowrap gap-5 justify-between">
+  <section class="lg:px-48 p-10 pt-48 flex flex-wrap lg:flex-nowrap gap-5 justify-between">
     <div class="flex-col gap-6 flex">
       <h1
         id="landing-title" v-motion class="text-5xl mt-10 font-bold" :initial=" {
@@ -57,7 +57,7 @@ export default {
           },
         } "
       >
-        Four beautiful flavors | <Nuxt-link class="hover:underline text-text hover:text-blue transition-all" to="/palette">
+        Four beautiful flavors | <Nuxt-link class="hover:underline decoration-2 text-peach hover:text-blue transition-all" to="/palette">
           Full palette ->
         </Nuxt-link>
       </h3>
@@ -96,14 +96,7 @@ export default {
         },
       } " class="text-2xl font-flow flex flex-col max-w-xl p-5 h-fit rounded-lg select-none overflow-hidden mt-20 bg-gradient-to-r from-base to-mantle relative"
     >
-      <div v-motion-slide-up :delay="1000" class="absolute bottom-0 left-0 p-4 pt-0 bg-transparent w-full z-10 backdrop-blur-md border-t-2 border-overlay1"><span class="text-rosewater"><span class="text-yellow">J</span> catppuccin js</span></div>
-      <div v-motion-slide-right :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> i<span class="text-teal"> = </span><span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++) {</div>
-      <div v-motion-slide-right :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Count:"</span>, i);</div>
-      <div v-motion-slide-right :delay="1000" class="line overflow-hidden"> }</div>
-
       <div v-motion-slide-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-overlay0">// Array iteration</span></div>
-      <div v-motion-slide-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">var</span> colors<span class="text-teal"> = </span>[<span class="mx-4 text-green">"Red"</span>, <span class="mx-4 text-green">"Green"</span>, <span class="mx-4 text-green">"Blue"</span>];</div>
-      <div v-motion-slide-left :delay="1000" class="line overflow-hidden"><span class="mx-4 text-mauve">for</span> (<span class="mx-4 text-mauve">var</span> index <span class="mx-4 text-mauve">in</span> colors) {</div>
       <div v-motion-slide-left :delay="1000" class="line overflow-hidden">    <span class="mx-4 text-peach">console</span>.<span class="mx-4 text-blue">log</span>(<span class="mx-4 text-green">"Color:"</span>, colors[index]);</div>
       <div v-motion-slide-left :delay="1000" class="line overflow-hidden"> + something</div>
 
