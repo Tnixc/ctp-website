@@ -61,7 +61,7 @@ export default {
 <template>
   <Navigation />
   <div class="bg-base text-text overflow-y-scroll flex justify-center">
-    <div class="max-w-6xl">
+    <div class="max-w-6xl w-screen">
       <NuxtPage class="pt-20" />
       <Footer />
     </div>
